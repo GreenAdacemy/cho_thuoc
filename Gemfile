@@ -87,3 +87,5 @@ gem "simple_form", "~> 5.1"
 gem "slim-rails", "~> 3.3"
 
 gem "active_decorator", "~> 1.4"
+
+gem "trestle-auth", "~> 0.4.3"
