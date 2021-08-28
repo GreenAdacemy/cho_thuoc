@@ -1,11 +1,9 @@
 .container
   .row[style="margin-top:10px"]
-    .col[style=""]
-      | col_1
+    .col-1
     .col-10
       =render 'landing/particals/splide'
       - if !user_signed_in?
         =render 'landing/particals/member'
       =render 'landing/particals/product'
-    .col[style=""]
-      | col_3
+    .col-1
