@@ -12,9 +12,9 @@
   .row
     .col
       h5
-        | Tổng sản phẩm:
+        =I18n.t('checkout.sum_pro')
       h5
-        | Thành tiền:
+        =I18n.t('checkout.sum_price')
     .col
       h6
         = @cart&.counter

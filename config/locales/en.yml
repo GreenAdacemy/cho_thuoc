@@ -39,22 +39,46 @@ en:
     about: About Us
     contact: Contact
     product: Product
+    language: Language
+    cart: Cart
 
   title:
-    login: login
-    sign_up: sign up
-    logout: log out
+    login: Login
+    sign_up: Sign up
+    logout: Log out
+    hot: People are looking for
+    recommended: Recommend for you
+    new: New product
+    more: More ->
+    contact: Contact
+    product: Products
 
   label:
     email: Email
-    pass: password
-    remember: remember me
-    pass_confirm: password confirmation
+    pass: Password
+    remember: Remember me
+    pass_confirm: Password Confirmation
 
   btn:
     login: LOGIN
     sign_up: SIGN UP
+    buy: Buy now
+    add2cart: Add to cart
 
   admin:
     vi: Vietnamese
     en: English
+
+  product:
+    rate: Rating
+    comment: Comment
+    manu: Manufacturer
+    des: Description
+    color: Available colors
+    spec: Specification
+    size: Size
+    quantity: Quantity
+
+  checkout:
+    sum_pro: Products
+    sum_price: Price

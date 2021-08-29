@@ -57,7 +57,7 @@ section.bg-light.product_single[data-controller="cart inventory"]
             h1.h2
               = product.name
             p.h3.py-2
-              | $ 
+              = I18n.t('money')+ " "
               = product.price
               | .00 
             p.py-2
@@ -67,31 +67,33 @@ section.bg-light.product_single[data-controller="cart inventory"]
               i.fa.fa-star.text-warning
               i.fa.fa-star.text-secondary
             span.list-inline-item.text-dark
-              | Rating 4.8 | 36 Comments
+              = I18n.t('product.rate')+": 4.8 |"
+            span.list-inline-item.text-dark
+              = I18n.t('product.comment')+": 36"
             ul.list-inline
               li.list-inline-item
                 h6
-                  | Nhà sản xuất:
+                  = I18n.t('product.manu')
               li.list-inline-item
                 p.text-muted
                   = product.manufacturer.name
             ul.list-inline
               li.list-inline-item
                 h6
-                  | Description:
+                  = I18n.t('product.des')
               li.list-inline-item
                 p
                   = product.description
             ul.list-inline
               li.list-inline-item
                 h6
-                  | Avaliable Color :
+                  = I18n.t('product.color')
               li.list-inline-item 
                 p.text-muted
                   strong
                     | White / Black
             h6
-              | Specification:
+              = I18n.t('product.spec')
             ul.list-unstyled.pb-3
               li
                 | Lorem ipsum dolor sit
@@ -113,7 +115,7 @@ section.bg-light.product_single[data-controller="cart inventory"]
                   .col-auto
                     ul.list-inline.pb-3
                       li.list-inline-item
-                        | Size : 
+                        = I18n.t('product.size') 
                       li.list-inline-item
                         input#product-size[type="hidden" name="product-size" value="S"]
                           li.list-inline-item
@@ -131,7 +133,7 @@ section.bg-light.product_single[data-controller="cart inventory"]
                   .col-auto
                       ul.list-inline.pb-3
                         li.list-inline-item.text-right
-                          |  Quantity 
+                          = I18n.t('product.quantity') 
                         input#product-quanity[type="hidden" name="product-quanity" value="1"]
                           li.list-inline-item
                             button#btn-minus.btn.btn-success[data-action="click->inventory#remItem" data-id=@item&.id]
@@ -145,8 +147,8 @@ section.bg-light.product_single[data-controller="cart inventory"]
                   .col.d-grid[style="text-align:center;"]
                     =link_to checkout_path do
                       button.btn.btn-success.btn-lg[type="submit" style=" width:138px;" name="submit" value="buy"]
-                        | Buy
+                        =  I18n.t('btn.buy')
 
                   .col.d-grid[style="text-align:center;"]
                     button[type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" data-id=product.id data-action="click->cart#add2Cart"]
-                      | Add To Cart
+                      = I18n.t('btn.add2cart')

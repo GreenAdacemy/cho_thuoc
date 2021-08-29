@@ -8,22 +8,46 @@ vi:
     about: Giới thiệu
     contact: Liên hệ
     product: Sản Phẩm
+    language: Ngôn ngữ
+    cart: Giỏ Hàng
 
   title:
     login: Đăng Nhập
     sign_up: Đăng Kí
     logout: Đăng xuất
+    hot: Sản Phẩm Bán Chạy
+    recommended: Gợi Ý Cho Bạn
+    new: Sản Phẩm Mới
+    more: Khám phá tiếp ->
+    contact: Liên Hệ
+    product: Sản phẩm
 
   label:
     email: Email
     pass: Mật Khẩu
-    remember: Ghi Nhớ
+    remember: Ghi Nhớ Tôi
     pass_confirm: Xác Nhận Mật Khẩu
 
   btn:
     login: Đăng Nhập
     sign_up: Đăng Kí
+    buy: Mua ngay
+    add2cart: Thêm vào giỏ
 
   admin:
-    vi: tiếng việt
-    en: tiếng anh
+    vi: Tiếng việt
+    en: Tiếng anh
+
+  product:
+    rate: Đánh Giá
+    comment: Bình luận
+    manu: Nhà sản xuất
+    des: Miêu tả
+    color: Màu
+    spec: Thuộc tính
+    size: Cỡ
+    quantity: Số lượng
+
+  checkout:
+    sum_pro: Tổng sản phẩm
+    sum_price: Thành tiền

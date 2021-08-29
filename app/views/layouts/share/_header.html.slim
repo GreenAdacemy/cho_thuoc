@@ -14,7 +14,7 @@ header[data-controller="scroll"]
         li[data-controller="inventory"]
           a#cart[href="javascript:void(0)" data-action="click->inventory#opencart"]
             i.fa.fa-shopping-cart
-              |  Cart 
+              = I18n.t('menus.cart')
           =render 'inventory/index'
         - if user_signed_in?
           li.nav-item
@@ -31,7 +31,7 @@ header[data-controller="scroll"]
           .dropdown
 
             button#dropdownMenuLink.btn.btn-secondary.dropdown-toggle[type="button" data-bs-toggle="dropdown" aria-expanded="true"]
-              |  Languages 
+              = I18n.t('menus.language')
 
             ul.dropdown-menu[aria-labelledby="dropdownMenuLink"]
               li

@@ -1,10 +1,10 @@
 section[name="product" data-controller="product"]
 
-  =render partial:'landing/particals/products/slide_hot',locals:{id:'hot', title:'sản phẩm bán chạy', primary_id:'product_hot_primary', second_id:'splide_hot_secondary'}
+  =render partial:'landing/particals/products/slide_hot',locals:{id:'hot', title: I18n.t('title.hot'), primary_id:'product_hot_primary', second_id:'splide_hot_secondary'}
 
-  =render partial:'landing/particals/products/slide_recommended',locals:{id:'recommended', title:'gợi ý cho bạn', primary_id:'product_recommended_primary', second_id:'splide_recommeded_secondary'}
+  =render partial:'landing/particals/products/slide_recommended',locals:{id:'recommended', title: I18n.t('title.recommended'), primary_id:'product_recommended_primary', second_id:'splide_recommeded_secondary'}
 
-  =render partial:'landing/particals/products/slide_new',locals:{id:'new', title:'sản phẩm mới', primary_id:'product_new_primary', second_id:'splide_new_secondary'}
+  =render partial:'landing/particals/products/slide_new',locals:{id:'new', title: I18n.t('title.new'), primary_id:'product_new_primary', second_id:'splide_new_secondary'}
   
-  = link_to "Khám phá tiếp", products_path, class:"btn btn-warning"
+  = link_to I18n.t('title.more'), products_path, class:"btn btn-warning mt-5"
   =render 'landing/particals/contact'
