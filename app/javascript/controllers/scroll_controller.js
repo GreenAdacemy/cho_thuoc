@@ -21,6 +21,10 @@ export default class extends Controller {
     });
   }
   navbarWillFixed(scrollY) {
+    if(this.scrollTargets.length === 0) {
+      return
+    }
+
     let id = this.scrollTarget.getAttribute("id");
     let classes = document.querySelector(`#${id}`).classList;
     if (scrollY >= 120) {

@@ -1,14 +1,10 @@
 section[name="splide" data-controller="splide"]
   #splide.splide[data-splide-target="splide" data-option="main"]
-
     .splide__track
-
       ul.splide__list
         - @slides.each do |slide|
           li.splide__slide
-
             .splide__slide-content
-              img[data-splide-lazy=load_image(slide) alt='sample']
-            
+              img[data-splide-lazy=load_image(slide) alt='sample']            
               .splide__slide-description.w-50.text-white.p-2.rounded.bg-secondary
                 = slide.description.html_safe

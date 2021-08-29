@@ -73,10 +73,11 @@ export default class extends ApplicationController {
   switch_lang(event) {
     // let el = event.currentTarget
     // let option = el.options[el.selectedIndex]
-
-    this.stimulate(
-      "langReflex#switch_lang",
-      event.currentTarget.getAttribute("data-value")
-    );
+    if (this.isActionCableConnectionOpen()) {
+      this.stimulate(
+        "langReflex#switch_lang",
+        event.currentTarget.getAttribute("data-value")
+      )      
+    }
   }
 }
