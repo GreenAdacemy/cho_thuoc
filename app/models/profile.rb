@@ -37,6 +37,10 @@ class Profile < ApplicationRecord
   end
 
   def full_address
-    
+    address_str = ''
+    address_str << self.address[:city] << ', ' if self.address[:city]
+    address_str << self.address[:ref].to_s << ', ' if self.address[:ref]
+    address_str << self.address[:street] if self.address[:street]
+    address_str
   end
 end

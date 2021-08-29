@@ -5,7 +5,8 @@ namespace :product do
   desc 'Init default product for project'
   task init: :environment do
     puts 'Fetching data'
-    fetch_data.each_with_index do |item, index|
+    json = Rails.root.join('db/sample/products.json')
+    fetch_data(json).each_with_index do |item, index|
       manufacturer = Manufacturer.find_or_create_by(
         name: item['manufacturer'],
         alias: item['manufacturer'][0..5]
@@ -27,10 +28,5 @@ namespace :product do
         filename: "product##{index+1}"
       )
     end
-  end
-
-  private
-  def json_file
-    Rails.root.join('db/sample/products.json')
   end
 end

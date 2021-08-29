@@ -23,10 +23,7 @@ module ApplicationHelper
       Profile::sexes.map {|v,k| [k, v]}
     end
 
-    def fetch_data
+    def fetch_data(json_file = nil)
       File.exists?(json_file) ? JSON.parse(File.read(json_file)) : []
-    end
-
-    def json_file      
     end
 end

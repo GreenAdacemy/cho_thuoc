@@ -35,10 +35,13 @@ class User < ApplicationRecord
     params[:sex]=params[:sex].to_sym
     self.profile.update(params)
   end
+
   AVATAR = Mime::LOOKUP.keys.keep_if{ |v| v =~ /image/ }
+  
   def cart
     self.orders.in_cart.first
   end
+  
   private
     def create_default_profile
       self.create_profile unless self.profile
