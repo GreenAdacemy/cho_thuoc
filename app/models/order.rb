@@ -15,6 +15,8 @@ class Order < ApplicationRecord
   has_many :order_items, dependent: :destroy
 
   enum status: [:in_cart, :to_confirm, :confirmed, :to_ship, :shipping, :shipped, :completed, :cancled, :refunded]
+  
+  accepts_nested_attributes_for :order_items, allow_destroy: true
 
   def update_counter
     update(counter: self.order_items.sum(:quantity))

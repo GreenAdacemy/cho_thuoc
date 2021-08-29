@@ -5,5 +5,6 @@ namespace :project do
     Rake::Task['slide:init'].invoke
     Rake::Task['product:init'].invoke
     Rake::Task['user:init'].invoke
+    Rake::Task['cart:init'].invoke
   end
 end
