@@ -1,4 +1,4 @@
-header[data-controller="scroll lang"]
+header[data-controller="scroll"]
   span#go-top.rounded-circle.bg-warning.text-white.text-center.align-middle.d-none[data-action="click->scroll#gotoTop"]
 
     i.fas.fa-angle-up
@@ -27,11 +27,4 @@ header[data-controller="scroll lang"]
           li.nav-item.text-capitalize
             = link_to I18n.t('title.logout'), destroy_user_session_path , data: {confirm: "Are you sure?", method:"delete"}, class:'nav-link'
         li.nav-item
-          .dropdown
-            button#dropdownMenuLink.text-capitalize.btn.btn-secondary.dropdown-toggle[type="button" data-bs-toggle="dropdown" aria-expanded="true"]
-              = I18n.t("admin.#{I18n.locale}")
-            ul.dropdown-menu.text-capitalize[aria-labelledby="dropdownMenuLink"]
-              li
-                = link_to I18n.t('admin.en'), 'javascript:void(0)', class:'nav-link', data: {value: 'en' ,action: 'click->lang#switch_lang'}
-              li
-                = link_to I18n.t('admin.vi'), 'javascript:void(0)', class:'nav-link', data: {value: 'vi' ,action: 'click->lang#switch_lang'}
+          = render 'layouts/share/language'
