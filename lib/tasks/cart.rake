@@ -1,0 +1,2 @@
+namespace :cart do
+end

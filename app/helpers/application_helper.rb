@@ -10,14 +10,23 @@ module ApplicationHelper
         end
 
     end
+
     def default_image
         asset_pack_path 'media/images/No_img.jpg'
     end
+    
     def fecth_product
         @products=Product.all
     end
+    
     def sexes
       Profile::sexes.map {|v,k| [k, v]}
     end
 
+    def fetch_data
+      File.exists?(json_file) ? JSON.parse(File.read(json_file)) : []
+    end
+
+    def json_file      
+    end
 end

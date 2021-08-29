@@ -25,9 +25,12 @@ class User < ApplicationRecord
          
   has_many :orders, dependent: :destroy
   has_many :shipping_infos, dependent: :destroy
-  has_one :profile
+  has_one :profile, dependent: :destroy
   enum owner: [:customer, :shop]
   after_commit :create_default_profile, on: :create 
+
+  accepts_nested_attributes_for :profile, allow_destroy: true
+
   def update_profile(params)
     params[:sex]=params[:sex].to_sym
     self.profile.update(params)
@@ -38,6 +41,6 @@ class User < ApplicationRecord
   end
   private
     def create_default_profile
-      self.create_profile
+      self.create_profile unless self.profile
     end
 end

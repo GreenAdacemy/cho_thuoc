@@ -22,6 +22,9 @@ class Profile < ApplicationRecord
   belongs_to :user
   has_one_attached :avatar
   enum sex: [:unknown, :male, :female]
+  store :address, accessors: [ :street , :city , :district, :ward, :ref, :zipcode ]
+
+  attr_reader :full_address
 
   def full_name
     "#{self.first_name} #{self.last_name}" 
@@ -33,4 +36,7 @@ class Profile < ApplicationRecord
     end
   end
 
+  def full_address
+    
+  end
 end

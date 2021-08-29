@@ -1,3 +1,6 @@
+require Rails.root.join('app/helpers/application_helper')
+include ApplicationHelper
+
 namespace :product do
   desc 'Init default product for project'
   task init: :environment do
@@ -18,7 +21,7 @@ namespace :product do
         unit: item['unit'],
         manufacturer_id: manufacturer.id
       )
-      puts 'generate photo'
+      puts "generate photo for product ##{index+1}"
       product.image.attach(
         io: URI.parse("https://loremflickr.com/720/576?lock=#{index}").open,
         filename: "product##{index+1}"
@@ -27,11 +30,7 @@ namespace :product do
   end
 
   private
-  def fetch_data
-    JSON.parse(File.read(json_file))
-  end
-
   def json_file
-    Rails.root.join('db/products.json')
+    Rails.root.join('db/sample/products.json')
   end
 end
