@@ -39,9 +39,22 @@ Trestle.resource(:products) do
       end
     end
     select :manufacturer_id, Manufacturer.all.map{|obj| [obj.name, obj.id ] }
-
-  
   end
+
+  controller do
+    def import
+      p 'import'
+    end
+
+    def import_file
+      p params
+    end
+  end
+
+  routes do
+    get :import, on: :collection
+    post :import_file, on: :collection
+  end  
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

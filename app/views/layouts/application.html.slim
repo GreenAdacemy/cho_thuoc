@@ -4,6 +4,6 @@ html
     =render 'layouts/share/header_content'
     body
       = render 'layouts/share/screen'
-      - if user_signed_in?
-        = render 'layouts/share/header'
+      / - if user_signed_in?
+      = render 'layouts/share/header'
       = yield

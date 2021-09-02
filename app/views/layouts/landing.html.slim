@@ -3,6 +3,7 @@ html
   = render 'layouts/share/header_content'
   body
     = render 'layouts/share/screen'
+    =render 'layouts/share/header'
     = yield
   - if content_for?(:js_page)
     = yield(:js_page)

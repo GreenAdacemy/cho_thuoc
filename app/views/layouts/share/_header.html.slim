@@ -3,14 +3,14 @@ header[data-controller="scroll"]
 
     i.fas.fa-angle-up
 
-  nav#navbar_main.mobile-offcanvas.navbar.navbar-expand-lg.navbar-dark.bg-primary[data-scroll-target="scroll"]
+  nav#navbar_main.mobile-offcanvas.navbar.navbar-expand-lg.navbar-dark.bg-warning[data-scroll-target="scroll"]
     .container-fluid
 
       .offcanvas-header
         button.btn-close.float-end
 
       = link_to " Thuoc", root_path, class:"nav-link fab fa-cuttlefish fs-36" 
-      ul.navbar-nav
+      ul.navbar-nav.middle-navbar
         li[data-controller="inventory"]
           a#cart[href="javascript:void(0)" data-action="click->inventory#opencart"]
             i.fa.fa-shopping-cart

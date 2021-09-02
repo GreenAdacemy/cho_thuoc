@@ -30,4 +30,16 @@ module ApplicationHelper
   def check_current_lang(lang)
     I18n.locale.to_sym == lang.to_sym
   end
+
+  def accept_only_excel
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'
+  end
+
+  def accept_only_csv
+    '.csv'
+  end
+
+  def accept_only_office
+    accept_only_excel << ',' << accept_only_csv    
+  end
 end
