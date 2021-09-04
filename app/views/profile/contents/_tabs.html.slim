@@ -6,32 +6,32 @@
           li#name
             p
               span[style="color:green; font-size: 24px"]
-                | Họ và tên: 
+                =I18n.t('profile.name')+": " 
               =@profile.full_name
           li#email
             p
               span[style="color:green; font-size: 24px"]
-                | Email: 
+                =I18n.t('profile.email')+": "
               =@profile.email
           li#phone
             p
               span[style="color:green; font-size: 24px"]
-                | Số điện thoại: 
+                =I18n.t('profile.phone')+": "
               =@profile.phone
           li#gender
             p
               span[style="color:green; font-size: 24px"]
-                | Giới tính: 
+                =I18n.t('profile.gender')+": "
               =@profile.sex
           li#address
             p
               span[style="color:green; font-size: 24px"]
-                | Địa chỉ: 
+                =I18n.t('profile.address')+": "
               =@profile.address
           li#dob
             p
               span[style="color:green; font-size: 24px"]
-                | Ngày sinh: 
+                =I18n.t('profile.birthday')+": "
               =@profile.dob
           li
             =link_to "Update Profile", edit_user_profile_path, class:"btn btn-warning"

@@ -82,3 +82,11 @@ en:
   checkout:
     sum_pro: Products
     sum_price: Price
+
+  profile:
+    name: Name
+    email: Email
+    phone: Phone
+    gender: Gender
+    address: Address
+    birthday: Birthday

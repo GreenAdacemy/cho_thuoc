@@ -22,7 +22,7 @@ namespace :product do
         unit: item['unit'],
         manufacturer_id: manufacturer.id
       )
-      puts "generate photo for product ##{index+1}"
+      puts "generating photo for product ##{index+1}"
       product.image.attach(
         io: URI.parse("https://loremflickr.com/720/576?lock=#{index}").open,
         filename: "product##{index+1}"

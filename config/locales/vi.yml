@@ -51,3 +51,11 @@ vi:
   checkout:
     sum_pro: Tổng sản phẩm
     sum_price: Thành tiền
+
+  profile:
+    name: Họ Và Tên
+    email: Email
+    phone: Số Điện Thoại
+    gender: Giới Tính
+    address: Địa Chỉ
+    birthday: Ngày Sinh
