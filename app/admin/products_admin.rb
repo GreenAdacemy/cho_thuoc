@@ -43,18 +43,24 @@ Trestle.resource(:products) do
 
   controller do
     def import
-      p 'import'
+      @import = ImportManagement.new()
     end
 
     def import_file
-      p params
+      if params[:import_management]
+        import_params = params.require(:import_management).permit(:file)
+        ImportManagement.create(
+          import_params.merge({from: 'admin:products', to: Product.table_name})
+        )
+      end
+      redirect_to products_admin_index_path
     end
   end
 
   routes do
     get :import, on: :collection
     post :import_file, on: :collection
-  end  
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
