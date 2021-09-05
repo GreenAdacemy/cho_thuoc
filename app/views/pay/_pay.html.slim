@@ -1,8 +1,43 @@
-section[name='pay']
-  #main[data-pay-target="pay"]
-    a#close_pay[href="javascript:void(0)" data-section="pay" data-action="click->pay#closepay"]
-      i.fas.fa-times
+  / section[name='pay']
+  /   #main[data-pay-target="pay"]
+  /     a#close_pay[href="javascript:void(0)" data-section="pay" data-action="click->pay#closepay"]
+  /       i.fas.fa-times
 
-    h1 
-      |This is pay
-
+      
+      
+      
+      
+      
+      
+  /     h1#header
+  /       |This is pay
+  /     .row#products_details
+  /       .col
+  /         h5
+  /           =I18n.t('checkout.sum_pro')
+  /         h5
+  /           =I18n.t('checkout.sum_price')
+  /       .col
+  /         h6
+  /           = @cart&.counter
+  /         h6
+  /           = @cart&.subtotal
+  /           = I18n.t('money')
+  /     .ul#customer_details
+  /       .li
+  /         p
+  /           span[style="color:green; font-size: 24px"]
+  /             =I18n.t('profile.name')+": " 
+  /           =@profile.full_name
+  /       .li
+  /         p
+  /           span[style="color:green; font-size: 24px"]
+  /             =I18n.t('profile.address')+": " 
+  /           =@profile.address
+  /       .li
+  /         p
+  /           span[style="color:green; font-size: 24px"]
+  /             =I18n.t('profile.phone')+": " 
+  /           =@profile.phone
+  /     button.btn.btn-success#final
+  /       | Thanh toán!!

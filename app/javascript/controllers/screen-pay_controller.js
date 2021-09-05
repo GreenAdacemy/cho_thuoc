@@ -9,6 +9,5 @@ export default class extends ApplicationController {
     let classes = document.querySelector("section[name='pay']").classList;
     classes.remove("show");
     screen.remove("active");
-    console.log("close screen pay");
   }
 }

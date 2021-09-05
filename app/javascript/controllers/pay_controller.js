@@ -7,7 +7,6 @@ export default class extends ApplicationController {
   }
   openpay(event) {
     event.preventDefault();
-    console.log("openpay");
 
     let screen = document.querySelector(".screen-darken_pay").classList;
     let id = this.payTarget.getAttribute("id");
@@ -22,7 +21,6 @@ export default class extends ApplicationController {
   }
   closepay(event) {
     event.preventDefault();
-    console.log("closepay");
 
     let screen = document.querySelector(".screen-darken_pay").classList;
     let id = this.payTarget.getAttribute("id");
