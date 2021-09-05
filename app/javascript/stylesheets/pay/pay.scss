@@ -1,0 +1,27 @@
+section[name="pay"] {
+  display: none !important;
+
+  position: absolute;
+  top: 18%;
+  left: -92%;
+
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: #339966;
+
+  z-index: 999;
+
+  &.show {
+    display: block !important;
+  }
+  :before,
+  :after {
+    box-sizing: border-box;
+  }
+  #main {
+    #close_pay {
+      float: right;
+    }
+  }
+}

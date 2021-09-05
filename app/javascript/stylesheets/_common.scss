@@ -3,6 +3,7 @@
 @import "./variables";
 @import "order/item";
 @import "checkout/checkout";
+@import "pay/pay";
 
 * {
   box-sizing: border-box;
@@ -30,6 +31,26 @@ a {
   }
 }
 .screen-darken {
+  height: 100%;
+  width: 100%;
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+  &.active {
+    z-index: 10;
+    transition: opacity 0.3s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.screen-darken_pay {
   height: 100%;
   width: 100%;
   z-index: 900;
@@ -1260,10 +1281,10 @@ section {
 }
 
 .show-less {
-  text-overflow:ellipsis;
-  overflow:hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
   display: -webkit-box !important;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  white-space: normal;  
+  white-space: normal;
 }

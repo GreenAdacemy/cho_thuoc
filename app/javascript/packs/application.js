@@ -14,9 +14,9 @@ const images = require.context("../images", true);
 
 // import Splide from'@splidejs/splide';
 
-document.addEventListener("DOMContentLoaded", function () {
-  NavbarTrigger();
-  // new Splide ( '#splide', {}).mount()
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   NavbarTrigger();
+//   // new Splide ( '#splide', {}).mount()
+// });
 
 import "controllers";

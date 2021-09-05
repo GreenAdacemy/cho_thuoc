@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/inventory', controller: :inventory, action: :index
   get '/orders', controller: :orders, action: :index
   get '/checkout', controller: :checkout, action: :index
+  get '/pay', controller: :pay, action: :pay
   
   resources :users, only: [] do
     resource :profile, controller: :profile

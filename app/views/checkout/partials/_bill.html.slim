@@ -21,3 +21,8 @@
       h6
         = @cart&.subtotal
         = I18n.t('money')
+    h3    
+      button.btn.btn-warning#btn_pay[data-controller="pay"]  
+        a#cart[href="javascript:void(0)" data-action="click->pay#openpay"]
+          | pay 
+        =render 'pay/pay'
