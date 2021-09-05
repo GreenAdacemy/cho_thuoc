@@ -12,5 +12,12 @@
 #
 class ImportManagement < ApplicationRecord
   has_one_attached :file
-  enum status: [:waiting, :prepare, :started, :doned, :error, :pending, :stoped]
+  enum status: [:waiting, :preparing, :prepared, :started, :wip, :doned, :error, :pending, :stoped]
+
+  after_commit :add_job, on: [:create]
+
+  private
+  def add_job
+    ImportFileJob.perform_later self.id
+  end
 end

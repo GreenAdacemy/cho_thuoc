@@ -29,6 +29,8 @@ class Product < ApplicationRecord
 
     globalize_accessors :locales => I18n.available_locales, :attributes => [:description]
 
+    accepts_nested_attributes_for :manufacturer
+
     def thumbnail
         if self.image.attached?
             return url_for(self.image)
