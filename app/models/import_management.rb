@@ -5,7 +5,7 @@
 #  id          :bigint           not null, primary key
 #  description :string
 #  from        :string
-#  status      :integer          default(0)
+#  status      :integer          default("waiting")
 #  to          :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -18,6 +18,6 @@ class ImportManagement < ApplicationRecord
 
   private
   def add_job
-    ImportFileJob.perform_later self.id
+    ImportFileJob.perform_later self.id #đợi confirm
   end
 end

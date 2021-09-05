@@ -1,12 +1,14 @@
 class ImportFileJob < ApplicationJob
   queue_as :import
 
-  def perform(*args)
-    im = ImportManagement.find_by(id:args.first)
+  def perform(*args) #chạy
+    im = ImportManagement.waiting.find_by(id:args.first)
     im.started!
+
     im.file.open do |file|
       @office = Office.new({file: file})
     end
+    
     im.wip!
     select_action im
   end
@@ -33,7 +35,6 @@ class ImportFileJob < ApplicationJob
           }
         )
       end
-      p data
       Product.create(data)
     end
     im.doned!
