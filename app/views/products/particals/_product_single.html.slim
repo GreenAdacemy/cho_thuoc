@@ -146,8 +146,13 @@ section.bg-light.product_single[data-controller="cart inventory"]
                 .row.pb-3
                   .col.d-grid[style="text-align:center;"]
                     =link_to checkout_path do
+<<<<<<< HEAD
                       button.btn.btn-success.btn-lg[type="submit" style=" width:138px;" name="submit" value="buy"]
                         =  I18n.t('btn.buy')
+=======
+                      button.btn.btn-success.btn-lg[type="submit" style=" width:100%;" name="submit" value="buy"]
+                        | Buy
+>>>>>>> demo
 
                   .col.d-grid[style="text-align:center;"]
                     button[type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" data-id=product.id data-action="click->cart#add2Cart"]

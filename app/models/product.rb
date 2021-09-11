@@ -4,7 +4,6 @@
 #
 #  id              :bigint           not null, primary key
 #  description     :text
-#  description     :text
 #  hot             :boolean
 #  name            :string
 #  pakage          :string
@@ -29,6 +28,8 @@ class Product < ApplicationRecord
     translates :description
 
     globalize_accessors :locales => I18n.available_locales, :attributes => [:description]
+
+    accepts_nested_attributes_for :manufacturer
 
     def thumbnail
         if self.image.attached?

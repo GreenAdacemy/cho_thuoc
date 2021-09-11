@@ -1,0 +1,14 @@
+#admin-import
+  #admin-import-title Import Data
+  #admin-import-form
+    / = form_tag import_file_products_admin_index_path , method: 'post' do
+    /   .label
+    /     label[for='file'] Select csv to import
+    /     = @table
+    /   = file_field_tag :file, accept: accept_only_office
+    /   = submit_tag 'Import'
+    = form_with model: @import, url: import_file_products_admin_index_path, method: 'post' do |f|
+      .label
+        label[for='file'] Select csv to import
+      = f.file_field :file, accept: accept_only_office
+      = f.submit 'Import'

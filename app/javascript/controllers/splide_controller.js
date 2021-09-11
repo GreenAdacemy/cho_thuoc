@@ -25,6 +25,12 @@ export default class extends Controller {
   }
 
   initSplide(){
+    if(this.splideTargets.length === 0) {
+      return
+    }
+    if (this.splideTarget.classList.contains('splide--loop')) {
+      return
+    }
     let id = this.splideTarget.getAttribute('id')
     let splide = new Splide(`#${id}`,this.options)
     if(splide){

@@ -1,0 +1,10 @@
+:verbose: true
+:logfile: ./log/sidekiq.log
+development:
+  :concurrency: 1
+production:
+  :concurrency: 20
+:queues:
+  - import
+  - default
+:timeout: 60

@@ -39,8 +39,27 @@ Trestle.resource(:products) do
       end
     end
     select :manufacturer_id, Manufacturer.all.map{|obj| [obj.name, obj.id ] }
+  end
 
-  
+  controller do
+    def import
+      @import = ImportManagement.new()
+    end
+
+    def import_file
+      if params[:import_management]
+        import_params = params.require(:import_management).permit(:file)
+        ImportManagement.create(
+          import_params.merge({from: 'admin:products', to: Product.table_name})
+        )
+      end
+      redirect_to products_admin_index_path
+    end
+  end
+
+  routes do
+    get :import, on: :collection
+    post :import_file, on: :collection
   end
 
   # By default, all parameters passed to the update and create actions will be

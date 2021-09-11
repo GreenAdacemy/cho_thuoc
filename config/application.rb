@@ -36,5 +36,7 @@ module ChoThuoc
     config.generators.system_tests = nil
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :vi]
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end

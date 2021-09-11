@@ -91,3 +91,8 @@ gem "active_decorator", "~> 1.4"
 gem "trestle-auth", "~> 0.4.3"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "roo", "~> 2.8"
+gem "activerecord-import", "~> 1.2"
+
+gem "roo-xls", "~> 1.2"

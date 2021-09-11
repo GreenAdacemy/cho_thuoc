@@ -1,15 +1,10 @@
 section[name="member"]
   .w-100.h-100.mt-5.p-3
-
     .container
-
-      .row
-
+      .row.text-capitalize
         .col-sm-6[style="text-align:right"]
-
           .btn.btn-primary
             = link_to I18n.t('title.login'), new_user_session_path , class:'nav-link'
         .col-sm-6[style="text-align:left"]
-
           .btn.btn-primary
             = link_to I18n.t('title.sign_up'), new_user_registration_path , class:'nav-link'

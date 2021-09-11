@@ -3,14 +3,14 @@ header[data-controller="scroll"]
 
     i.fas.fa-angle-up
 
-  nav#navbar_main.mobile-offcanvas.navbar.navbar-expand-lg.navbar-dark.bg-primary[data-scroll-target="scroll"]
+  nav#navbar_main.mobile-offcanvas.navbar.navbar-expand-lg.navbar-dark.bg-warning[data-scroll-target="scroll"]
     .container-fluid
 
       .offcanvas-header
         button.btn-close.float-end
 
       = link_to " Thuoc", root_path, class:"nav-link fab fa-cuttlefish fs-36" 
-      ul.navbar-nav
+      ul.navbar-nav.middle-navbar
         li[data-controller="inventory"]
           a#cart[href="javascript:void(0)" data-action="click->inventory#opencart"]
             i.fa.fa-shopping-cart
@@ -24,8 +24,9 @@ header[data-controller="scroll"]
         li.nav-item
           = link_to "Product",products_path , class:"nav-link"
         - if user_signed_in?
-          li.nav-item
+          li.nav-item.text-capitalize
             = link_to I18n.t('title.logout'), destroy_user_session_path , data: {confirm: "Are you sure?", method:"delete"}, class:'nav-link'
+<<<<<<< HEAD
         li.nav-item[data-controller="lang"]
 
           .dropdown
@@ -38,3 +39,7 @@ header[data-controller="scroll"]
                 = link_to I18n.t('admin.en'), 'javascript:void(0)', class:'nav-link bg-primary', data: {value: 'en' ,action: 'click->lang#switch_lang'}
               li
                 = link_to I18n.t('admin.vi'), 'javascript:void(0)', class:'nav-link bg-primary', data: {value: 'vi' ,action: 'click->lang#switch_lang'}
+=======
+        li.nav-item
+          = render 'layouts/share/language'
+>>>>>>> demo

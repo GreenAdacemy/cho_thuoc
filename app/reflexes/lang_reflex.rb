@@ -32,10 +32,11 @@ class LangReflex < ApplicationReflex
   #
   # Learn more at: https://docs.stimulusreflex.com/reflexes#reflex-classes
 
-def switch_lang(locale)
-  session[:locale] = locale.to_sym
-  I18n.locale = session[:locale]
-end
+  delegate :current_uuid, to: :connection
 
-
+  def switch_lang(locale)
+    session[:locale] = locale.to_sym
+    I18n.locale = session[:locale]
+    cable_ready["system_listen-#{current_uuid}"].broadcast
+  end
 end

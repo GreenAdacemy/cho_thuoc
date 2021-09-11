@@ -1,7 +1,8 @@
 # == Route Map
 #
-
+require 'sidekiq/web'
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
   # get '/products', controller: :products, action: :index;
   resources :products, only: [:index, :show]
   devise_for :users, controllers: {

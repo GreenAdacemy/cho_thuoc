@@ -4,7 +4,12 @@ html
     =render 'layouts/share/header_content'
     body
       = render 'layouts/share/screen'
+<<<<<<< HEAD
       = render 'layouts/share/screen_pay'
       - if user_signed_in?
         = render 'layouts/share/header'
+=======
+      / - if user_signed_in?
+      = render 'layouts/share/header'
+>>>>>>> demo
       = yield
