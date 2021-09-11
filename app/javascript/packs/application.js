@@ -11,14 +11,7 @@ ActiveStorage.start();
 import "../stylesheets/application.scss";
 const images = require.context("../images", true);
 
-<<<<<<< HEAD
-// import Splide from'@splidejs/splide';
-
 // document.addEventListener("DOMContentLoaded", function () {
 //   NavbarTrigger();
 //   // new Splide ( '#splide', {}).mount()
 // });
-=======
->>>>>>> demo
-
-import "controllers";
