@@ -4,6 +4,7 @@
 #
 #  id              :bigint           not null, primary key
 #  description     :text
+#  description     :text
 #  hot             :boolean
 #  name            :string
 #  pakage          :string
