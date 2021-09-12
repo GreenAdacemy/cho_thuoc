@@ -1,9 +1,3 @@
-.switch
-  input#vi.switch-input[type="radio" name="view" value="vi" checked=check_current_lang(:vi)]
-  label.switch-label.switch-label-off[for="vi"] ON
-  input#en.switch-input[type="radio" name="view" value="en" checked=check_current_lang(:en)]
-  label.switch-label.switch-label-on[for="month"] OFF
-
 .switch.top-8[data-controller='lang']
   input#vi.switch-input[type="radio" name="view" value="vi" checked=check_current_lang(:vi) data-value='vi' data-action='click->lang#switch_lang']
   label.switch-label.switch-label-off[for="vi"]
